@@ -1,0 +1,27 @@
+<div class="py-16 md:py-24 bg-gray-100">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-12">
+      <h1 class="text-4xl font-bold text-gray-800">Our Services</h1>
+      <p class="text-lg text-gray-600 mt-2">Comprehensive solutions from design to production.</p>
+    </div>
+
+    <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div *ngFor="let service of services" class="bg-white p-8 rounded-lg shadow-lg flex items-start space-x-6 hover:shadow-xl transition-shadow duration-300">
+        <div class="flex-shrink-0">
+          <div class="bg-blue-100 p-3 rounded-full">
+            <svg class="h-8 w-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path *ngIf="service.icon === 'LightBulbIcon'" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+              <path *ngIf="service.icon === 'WrenchScrewdriverIcon'" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.53 3.53a2.25 2.25 0 01-3.183 0l-3.53-3.53a4.5 4.5 0 016.336-4.486c.091.326.054.7-.14 1.243m-5.108.233l-.55-.55m0 0l-.493-.493a2.25 2.25 0 013.183 0l.493.493m0 0l.55.55m0 0l.493.493a2.25 2.25 0 01-3.183 0l-.493-.493z" />
+              <path *ngIf="service.icon === 'CubeTransparentIcon'" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 7.5l-2.25-1.313L16.5 7.5l2.25 1.313L21 7.5zM10.5 4.5l-2.25-1.313L5.25 4.5l2.25 1.313L10.5 4.5zM21 16.5l-2.25-1.313L16.5 16.5l2.25 1.313L21 16.5zM10.5 13.5l-2.25-1.313L5.25 13.5l2.25 1.313L10.5 13.5zM12 21.5l-2.25-1.313L7.5 21.5l2.25 1.313L12 21.5zM16.5 10.5l-2.25-1.313L11.25 10.5l2.25 1.313L16.5 10.5z" />
+              <path *ngIf="service.icon === 'ShieldCheckIcon'" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.623 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+            </svg>
+          </div>
+        </div>
+        <div>
+          <h2 class="text-xl font-bold text-gray-800 mb-2">{{ service.title }}</h2>
+          <p class="text-gray-600">{{ service.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

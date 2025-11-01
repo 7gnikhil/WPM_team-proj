@@ -1,0 +1,45 @@
+<header class="bg-white/80 backdrop-blur-md shadow-md sticky top-0 z-50">
+  <div class="container mx-auto px-6 py-3">
+    <div class="flex items-center justify-between">
+      <div class="flex items-center">
+        <a routerLink="/home" class="flex items-center text-gray-800 hover:text-blue-600 transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" class="h-8 w-8 text-blue-700">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M10.343 3.94c.09-.542.56-1.007 1.11-1.226l.55-.22a2.25 2.25 0 012.122 0l.55.22c.55.219 1.02.684 1.11 1.226l.09.542a2.25 2.25 0 003.956.534l.257-.498a2.25 2.25 0 012.48-1.054l.548.19c.538.188 1.004.644 1.18 1.182l.19.548a2.25 2.25 0 01-1.055 2.479l-.498.257a2.25 2.25 0 00-.533 3.956l.542.09c.542.09.94.56 1.226 1.11l.22.55a2.25 2.25 0 010 2.122l-.22.55c-.219.55-.684 1.02-1.226 1.11l-.542.09a2.25 2.25 0 00-3.956.533l-.257.498a2.25 2.25 0 01-2.48 1.055l-.548-.19c-.538-.188-1.004-.644-1.18-1.182l-.19-.548a2.25 2.25 0 011.055-2.479l.498-.257a2.25 2.25 0 00.533-3.956l-.542-.09a2.25 2.25 0 01-1.226-1.11l-.22-.55a2.25 2.25 0 010-2.122l.22-.55c.219-.55.684-1.02 1.226-1.11l.542-.09a2.25 2.25 0 003.956-.534l.257-.498a2.25 2.25 0 012.48-1.054l.548.19c.538.188 1.004.644 1.18 1.182l.19.548a2.25 2.25 0 01-1.055 2.479l-.498.257a2.25 2.25 0 00-.533 3.956l.542.09c.542.09.94.56 1.226 1.11l.22.55a2.25 2.25 0 010 2.122l-.22.55c-.219.55-.684 1.02-1.226 1.11l-.542.09a2.25 2.25 0 00-3.956.533l-.257.498a2.25 2.25 0 01-2.48 1.055l-.548-.19c-.538-.188-1.004-.644-1.18-1.182l-.19-.548a2.25 2.25 0 011.055-2.479l.498-.257a2.25 2.25 0 00.533-3.956l-.542-.09c-.542-.09-.94-.56-1.226-1.11l-.22-.55a2.25 2.25 0 010-2.122l.22-.55c.219-.55.684-1.02 1.226-1.11l.542-.09a2.25 2.25 0 00.534-3.956l-.498-.257a2.25 2.25 0 01-2.48-1.055l-.19-.548c-.176-.538-.642-1-1.18-1.182l-.548-.19a2.25 2.25 0 01-2.48 1.055l-.257.498a2.25 2.25 0 00-.533 3.956l-.09.542z" />
+            <path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+          </svg>
+          <h1 class="text-xl font-bold ml-2">Maruthi Toolings</h1>
+        </a>
+        <nav class="hidden md:flex items-center ml-8 space-x-4">
+          <a
+            *ngFor="let link of navLinksLeft"
+            [routerLink]="link.route"
+            routerLinkActive="text-blue-600"
+            [routerLinkActiveOptions]="{exact: false}"
+            class="px-3 py-2 text-sm font-medium transition-colors duration-200 text-gray-600 hover:text-blue-600"
+          >
+            {{ link.label }}
+          </a>
+        </nav>
+      </div>
+      <nav class="hidden md:flex items-center space-x-4">
+        <a
+          *ngFor="let link of navLinksRight"
+          [routerLink]="link.route"
+          routerLinkActive="text-blue-600"
+          [routerLinkActiveOptions]="{exact: false}"
+          class="px-3 py-2 text-sm font-medium transition-colors duration-200 text-gray-600 hover:text-blue-600"
+        >
+          {{ link.label }}
+        </a>
+      </nav>
+      <div class="md:hidden">
+        <!-- Mobile menu button can be added here -->
+        <button class="text-gray-600 hover:text-blue-600 focus:outline-none">
+          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>

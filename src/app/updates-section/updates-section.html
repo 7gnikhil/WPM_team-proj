@@ -1,0 +1,15 @@
+<section class="bg-white py-12 md:py-16">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-10">
+      <h2 class="text-3xl font-bold text-gray-800">Latest Updates</h2>
+      <p class="text-gray-600 mt-2">News from our workshop and company.</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div *ngFor="let update of updates" class="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+        <p class="text-sm text-gray-500 mb-2">{{ update.date | date:'mediumDate' }}</p>
+        <h3 class="text-lg font-semibold text-blue-800 mb-2">{{ update.title }}</h3>
+        <p class="text-gray-700">{{ update.description }}</p>
+      </div>
+    </div>
+  </div>
+</section>
